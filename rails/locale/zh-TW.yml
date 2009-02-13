@@ -54,6 +54,13 @@
       over_x_years:
         one: "一年以上"
         other: "{{count}} 年以上"
+    prompts:
+      year:   "年"
+      month:  "月"
+      day:    "日"
+      hour:   "時"
+      minute: "分"
+      second: "秒"
   
   number:
     format:
@@ -77,11 +84,13 @@
       format:
         delimiter: ""
         precision: 1
+      storage_units: [Bytes, KB, MB, GB, TB]
   
   support:
     array:
-      sentence_connector: "和"
-      skip_last_comma: true
+      words_connector: ", "
+      two_words_connector: " 和 "
+      last_word_connector: ", 和 "
   
   activerecord:
     errors:

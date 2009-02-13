@@ -2,11 +2,15 @@
 # by Ozgun Ataman (ozataman@gmail.com)
 
 tr:
+  locale:
+    native_name: Türkçe
+    address_separator: " "
   date:
     formats:
       default: "%d.%m.%Y"
+      numeric: "%d.%m.%Y"
       short: "%e %b"
-      long: "%e %B %Y"
+      long: "%e %B %Y, %A"
       only_day: "%e"
 
     day_names: [Pazar, Pazartesi, Salı, Çarşamba, Perşembe, Cuma, Cumartesi]
@@ -18,8 +22,9 @@ tr:
   time:
     formats:
       default: "%a %d.%b.%y %H:%M"
+      numeric: "%d.%b.%y %H:%M"
       short: "%e %B, %H:%M"
-      long: "%a %d.%b.%y %H:%M"
+      long: "%e %B %Y, %A, %H:%M"
       time: "%H:%M"
 
     am: "öğleden önce"
@@ -70,19 +75,23 @@ tr:
       format:
         unit: 'TRY'
         format: '%n%u'
-        separator: 
-        delimiter: 
-        precision: 
+        separator: ','
+        delimiter: '.'
+        precision: 2
     percentage:
       format:
-        delimiter: ""
+        delimiter: '.'
+        separator: ','
+        precision: 2
     precision:
       format:
-        delimiter: ""
+        delimiter: '.'
+        separator: ','
     human:
       format:
-        delimiter: ""
-        precision: 1
+        delimiter: '.'
+        separator: ','
+        precision: 2
 
   support:
     array:

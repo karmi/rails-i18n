@@ -64,7 +64,24 @@ ru:
       format:
         delimiter: ""
         precision: 1
-      storage_units: [байт, КБ, МБ, ГБ, ТБ]
+      # Rails 2.2
+      # storage_units: [байт, КБ, МБ, ГБ, ТБ]
+
+      # Rails 2.3
+      storage_units:
+        # Storage units output formatting.
+        # %u is the storage unit, %n is the number (default: 2 MB)
+        format: "%n %u"
+        units:
+          byte:
+            one:   "байт"
+            few:   "байта"
+            many:  "байт"
+            other: "байта"
+          kb: "КБ"
+          mb: "МБ"
+          gb: "ГБ"
+          tb: "ТБ"
 
   datetime:
     distance_in_words:
@@ -119,6 +136,13 @@ ru:
         few:   "больше {{count}} лет"
         many:  "больше {{count}} лет"
         other: "больше {{count}} лет"
+    prompts:
+      year: "Год"
+      month: "Месяц"
+      day: "День"
+      hour: "Часов"
+      minute: "Минут"
+      second: "Секунд"
 
   activerecord:
     errors:
@@ -166,6 +190,11 @@ ru:
 
   support:
     array:
+      # Rails 2.2
       sentence_connector: "и"
       skip_last_comma: true
-
+      
+      # Rails 2.3
+      words_connector: ", "
+      two_words_connector: " и "
+      last_word_connector: " и "
